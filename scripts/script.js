@@ -23,6 +23,30 @@ function continueGame() {
     // bg color setting
     addBgColorById(alphabet);
 }
+// keyboard function 
+function handleKeyPress(event) {
+    const pressedKey = event.key;
+    console.log('Player pressed', pressedKey);
+
+    const currAlphaML = document.getElementById('screen-alpha');
+    const crAlpha = currAlphaML.innerText;
+    const expectedAlpha = crAlpha.toLowerCase();
+    console.log(pressedKey, expectedAlpha);
+    // check
+    if (pressedKey === expectedAlpha) {
+        console.log('get a point');
+        continueGame();
+        removeBgColorById(pressedKey);
+
+    }
+    else {
+        console.log('loss');
+        addRColorById(pressedKey);
+    }
+
+}
+document.addEventListener('keyup', handleKeyPress)
+
 
 function play() {
     hideElementById('home');
@@ -31,8 +55,15 @@ function play() {
 }
 // add bg color by id
 function addBgColorById(elementId) {
-    const element = document.getElementById(elementId)
+    const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
-
+}
+function addRColorById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-red-400');
+}
+function removeBgColorById(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400');
 }
 
