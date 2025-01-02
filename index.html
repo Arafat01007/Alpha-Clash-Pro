@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme ="light">
 
 <head>
     <!-- fonts -->
@@ -37,15 +37,16 @@
 <body class="bg-[#010313] min-h-screen">
     <main class="bg-[#010313] min-h-screen bg-no-repeat bg-center bg-[url(images/background.png)]">
         <!-- Home screen -->
-        <section class="home min-h-screen flex flex-col items-center justify-center">
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center">
             <div class=" flex flex-col items-center"></div>
             <h1 class="text-[170px] anton text-white font-normal">ALPHABET CLASH</h1>
             <p class="poppins text-white text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button onclick="play()" class="btn btn-ghost text-black poppins font-semibold text-xl bg-white mt-14">Play Now</button>
+            <button onclick="play()" class="btn btn-ghost text-black poppins font-semibold text-xl bg-white mt-14">Play
+                Now</button>
             </div>
         </section>
         <!-- Play screen -->
-        <section class="playground hidden">
+        <section id="playground" class="hidden">
             <div class="flex flex-col justify-center items-center gap-20 py-20">
                 <div>
                     <!-- screen -->
@@ -58,7 +59,7 @@
                                     watch keyboard while playing...</p>
                             </div>
                             <div class=" flex justify-center items-center h-full poppins font-semibold">
-                                <p class="text-black text-9xl">Y</p>
+                                <p id="screen-alpha" class="text-black text-9xl uppercase">Y</p>
                             </div>
                         </div>
                     </div>
@@ -67,37 +68,37 @@
                 <!-- keyboard -->
                 <div class="">
                     <div class="my-1 flex inter  w-full justify-center gap-1">
-                        <kbd inter class="kbd inter">q</kbd inter>
-                        <kbd inter class="kbd inter">w</kbd inter>
-                        <kbd inter class="kbd inter">e</kbd inter>
-                        <kbd inter class="kbd inter">r</kbd inter>
-                        <kbd inter class="kbd inter">t</kbd inter>
-                        <kbd inter class="kbd inter">y</kbd inter>
-                        <kbd inter class="kbd inter">u</kbd inter>
-                        <kbd inter class="kbd inter">i</kbd inter>
-                        <kbd inter class="kbd inter">o</kbd inter>
-                        <kbd inter class="kbd inter">p</kbd inter>
+                        <kbd id="q" inter class="kbd inter">q</kbd inter>
+                        <kbd id="w" inter class="kbd inter">w</kbd inter>
+                        <kbd id="e" inter class="kbd inter">e</kbd inter>
+                        <kbd id="r" inter class="kbd inter">r</kbd inter>
+                        <kbd id="t" inter class="kbd inter">t</kbd inter>
+                        <kbd id="y" inter class="kbd inter">y</kbd inter>
+                        <kbd id="u" inter class="kbd inter">u</kbd inter>
+                        <kbd id="i" inter class="kbd inter">i</kbd inter>
+                        <kbd id="o" inter class="kbd inter">o</kbd inter>
+                        <kbd id="p" inter class="kbd inter">p</kbd inter>
                     </div>
                     <div class="my-1 flex w-full inter justify-center gap-1">
-                        <kbd inter class="kbd inter">a</kbd inter>
-                        <kbd inter class="kbd inter">s</kbd inter>
-                        <kbd inter class="kbd inter">d</kbd inter>
-                        <kbd inter class="kbd inter">f</kbd inter>
-                        <kbd inter class="kbd inter">g</kbd inter>
-                        <kbd inter class="kbd inter">h</kbd inter>
-                        <kbd inter class="kbd inter">j</kbd inter>
-                        <kbd inter class="kbd inter">k</kbd inter>
-                        <kbd inter class="kbd inter">l</kbd inter>
+                        <kbd id="a" inter class="kbd inter">a</kbd inter>
+                        <kbd id="s" inter class="kbd inter">s</kbd inter>
+                        <kbd id="d" inter class="kbd inter">d</kbd inter>
+                        <kbd id="f" inter class="kbd inter">f</kbd inter>
+                        <kbd id="g" inter class="kbd inter">g</kbd inter>
+                        <kbd id="h" inter class="kbd inter">h</kbd inter>
+                        <kbd id="j" inter class="kbd inter">j</kbd inter>
+                        <kbd id="k" inter class="kbd inter">k</kbd inter>
+                        <kbd id="l" inter class="kbd inter">l</kbd inter>
                     </div>
                     <div class="my-1 flex w-full inter justify-center gap-1">
-                        <kbd inter class="kbd inter">z</kbd inter>
-                        <kbd inter class="kbd inter">x</kbd inter>
-                        <kbd inter class="kbd inter">c</kbd inter>
-                        <kbd inter class="kbd inter">v</kbd inter>
-                        <kbd inter class="kbd inter">b</kbd inter>
-                        <kbd inter class="kbd inter">n</kbd inter>
-                        <kbd inter class="kbd inter">m</kbd inter>
-                        <kbd inter class="kbd inter">/</kbd inter>
+                        <kbd id="z" inter class="kbd inter">z</kbd inter>
+                        <kbd id="x" inter class="kbd inter">x</kbd inter>
+                        <kbd id="c" inter class="kbd inter">c</kbd inter>
+                        <kbd id="v" inter class="kbd inter">v</kbd inter>
+                        <kbd id="b" inter class="kbd inter">b</kbd inter>
+                        <kbd id="n" inter class="kbd inter">n</kbd inter>
+                        <kbd id="m" inter class="kbd inter">m</kbd inter>
+                        <kbd id="/" inter class="kbd inter">/</kbd inter>
                     </div>
                 </div>
                 <!-- life score -->
@@ -116,7 +117,7 @@
             </div>
         </section>
         <!-- score -->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="score" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-4 lin p-11 rounded-2xl">
                 <h1 class="text-6xl font-extrabold poppins">Score <span class="font-medium">: 14</span></h1>
                 <button class="btn btn-ghost text-black poppins font-semibold text-xl bg-white mt-14">Play
