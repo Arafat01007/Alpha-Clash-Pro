@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme ="light">
+<html lang="en" data-theme="light">
 
 <head>
     <!-- fonts -->
@@ -106,21 +106,24 @@
                     <button class="btn bg-[#894189] inter text-white rounded-[30px] px-9 py-4">
                         Life
                         <img src="images/Group 23.svg" alt="">
-                        1
+                        <span id="life">5</span>
                     </button>
                     <button class="btn bg-[#360490] inter text-white rounded-[30px] px-9 py-4">
                         Score
                         <img src="images/monetization_on.svg" alt="">
-                        1
+                        <span id="score">0</span>
                     </button>
                 </div>
             </div>
         </section>
         <!-- score -->
-        <section id="score" class="flex justify-center items-center min-h-screen hidden">
+        <section id="score-screen" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-4 lin p-11 rounded-2xl">
-                <h1 class="text-6xl font-extrabold poppins">Score <span class="font-medium">: 14</span></h1>
-                <button class="btn btn-ghost text-black poppins font-semibold text-xl bg-white mt-14">Play
+                <h1 class="text-6xl font-extrabold poppins">Score <span class="font-medium">: <span
+                            id="final-score">14</span></span>
+                </h1>
+                <button onclick="playAgain()"
+                    class="btn btn-ghost text-black poppins font-semibold text-xl bg-white mt-14">Play
                     Again</button>
                 <p>Practice will make you Pro</p>
             </div>
